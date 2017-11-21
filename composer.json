@@ -1,0 +1,14 @@
+{
+    "name": "thesnews/fake-imgix",
+    "description": "Local developement stand-in for Imgix",
+    "require": {
+        "intervention/image": "^2.4"
+    },
+    "license": "GPL3",
+    "authors": [
+        {
+            "name": "Mike Joseph",
+            "email": "mike.joseph5@gmail.com"
+        }
+    ]
+}
