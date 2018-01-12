@@ -38,8 +38,13 @@ $uri = trim(str_replace('fakeimgix', '', trim($_SERVER['REQUEST_URI'], '/')), '/
 
 $key = md5($uri);
 
-$query =  substr($uri, strrpos($uri, '?')+1);
-$uri = substr($uri, 0, strrpos($uri, '?'));
+if (strpos($uri, '?') !== false) {
+    $query =  substr($uri, strrpos($uri, '?')+1);
+    $uri = substr($uri, 0, strrpos($uri, '?'));
+} else {
+    $query = '';
+    $uri = $uri;
+}
 
 $params = [];
 parse_str($query, $params);
